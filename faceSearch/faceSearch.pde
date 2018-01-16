@@ -1,6 +1,6 @@
 import gab.opencv.*;
 import processing.video.*;
-import java.awt.*;
+import java.awt.Rectangle;
 
 Capture camera;
 OpenCV opencv;
@@ -39,8 +39,6 @@ void draw() {
   Rectangle[] faces = opencv.detect();
   for (int i = 0; i < faces.length; i++) {
     image(img, faces[i].x*(1-bend*3), faces[i].y*(1-bend*2), faces[i].width + faces[i].x*(bend*6), faces[i].height+faces[i].y*(bend*4));
-    //rect(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
-    //rect(faces[i].x*(1-bend*3), faces[i].y*(1-bend*2), faces[i].width + faces[i].x*(bend*6), faces[i].height+faces[i].y*(bend*4));
   }
 }
 

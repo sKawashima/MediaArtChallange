@@ -8,7 +8,7 @@ OpenCV opencv;
 void setup() {
   //size(1280, 1024);
   size(640, 512);
-  camera = new Capture(this, width/2, height/2);  
+  camera = new Capture(this, width/2, height/2);
   opencv = new OpenCV(this, width/2, height/2);
 
   opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);
